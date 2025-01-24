@@ -1,0 +1,185 @@
+/* Reset básico para remover margens e preenchimentos indesejados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 0;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #ffd000, #ff9c07);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f2a900;
+}
+
+/* Estilo geral das seções */
+section {
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 85%;
+    max-width: 1200px;
+}
+
+section h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.item img, .item video {
+    max-width: 100%;
+    display: block;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.item p {
+    padding: 15px;
+    font-size: 16px;
+    color: #555;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.item:hover p {
+    color: #f2a900;
+}
+
+/* Nova Seção Tecnologias Usadas */
+#tecnologias {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#tecnologias h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 0;
+    animation: scrollLogos 20s linear infinite;
+}
+
+.logos img {
+    max-width: 100px;
+    margin: 0 15px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.logos img:hover {
+    opacity: 1;
+}
+
+/* Animação de rolagem suave das logos */
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 36px;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .item p {
+        font-size: 14px;
+    }
+}
