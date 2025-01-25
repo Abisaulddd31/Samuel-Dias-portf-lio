@@ -19,6 +19,14 @@
         </nav>
     </header>
 
+    <div class="lightbox" id="lightbox">
+        <button class="close" onclick="fecharLightbox()">×</button>
+        <img id="lightbox-img" src="" alt="">
+        <video id="lightbox-video" controls style="display: none;"></video>
+    </div>
+    
+
+
     <section id="banners">
         <h2>Banners</h2>
         <div class="galeria">
@@ -57,14 +65,14 @@
                     <source src="images/TRATOR.mp4" type="video/mp4">
                     Seu navegador não suporta o formato de vídeo.
                 </video>
-                <p>Descrição do Vídeo 1</p>
+                <p>ALUGUEL DE TRATORES</p>
             </div>
             <div class="item">
                 <video controls>
                     <source src="images/MARKITING MEDICO.mp4" type="video/mp4">
                     Seu navegador não suporta o formato de vídeo.
                 </video>
-                <p>Descrição do Vídeo 2</p>
+                <p>CLINICA MEDICA</p>
             </div>
           
             </div>
@@ -89,7 +97,7 @@
 
             <div class="item">
                 <img src="images/DENTISTA.png" alt="Imagem 3">
-                <p>Descrição da Imagem 3</p>
+                <p>CLINICA DENTISTA</p>
             </div>
           
             </div>
@@ -109,6 +117,7 @@
     </div>
 </section>
 
+<script src="js/light.js"></script>
     <footer>
         <p>&copy; 2025 Samuel Dias Leite</p>
     </footer>
